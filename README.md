@@ -2,7 +2,7 @@
 
 A modern, responsive Kanban board application built with React, TypeScript, and Tailwind CSS v4.
 
-![Kanban Board Screenshot](https://github.com/capebaldie/kanban-board/assets/placeholder/kanban_preview.png)
+![Kanban Board Screenshot](src/assets/kanban_preview.png)
 
 ## Features
 
