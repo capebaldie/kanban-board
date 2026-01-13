@@ -1,5 +1,6 @@
 export type Task = {
   id: string;
+  columnId?: string;
   content: string;
   createdAt?: string;
 };

@@ -4,13 +4,13 @@ import {
 } from "@dnd-kit/sortable";
 import { useDroppable } from "@dnd-kit/core";
 import type { ColumnType } from "../types";
-import { TaskCard } from "./TaskCard";
 
 interface ColumnProps {
   column: ColumnType;
+  children: React.ReactNode;
 }
 
-export function Column({ column }: ColumnProps) {
+export function Column({ column, children }: ColumnProps) {
   const { setNodeRef } = useDroppable({
     id: column.id,
     data: {
@@ -38,9 +38,7 @@ export function Column({ column }: ColumnProps) {
           items={column.tasks.map((t) => t.id)}
           strategy={verticalListSortingStrategy}
         >
-          {column.tasks.map((task) => (
-            <TaskCard key={task.id} task={task} />
-          ))}
+          {children}
         </SortableContext>
 
         {column.tasks.length === 0 && (

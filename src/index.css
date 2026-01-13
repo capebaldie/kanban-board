@@ -15,9 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
 
   --font-sans: "Inter", system-ui, sans-serif;
-  --color-background: #0f172a;
-  --color-surface: #1e293b;
-  --color-primary: #3b82f6;
+  --color-background: #000000;
+  --color-surface: #180000;
+  --color-primary: #ff4d001d;
   --color-text: #f8fafc;
 }
 
@@ -27,11 +27,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--color-background),
-    var(--color-surface)
-  );
+  background-image: linear-gradient(to bottom right,
+      var(--color-background),
+      var(--color-surface));
 }
 
 #root {

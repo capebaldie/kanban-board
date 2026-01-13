@@ -5,9 +5,10 @@ import type { Task } from "../types";
 
 interface TaskCardProps {
   task: Task;
+  columnId: string;
 }
 
-export function TaskCard({ task }: TaskCardProps) {
+export function TaskCard({ task, columnId }: TaskCardProps) {
   const {
     attributes,
     listeners,
@@ -20,6 +21,7 @@ export function TaskCard({ task }: TaskCardProps) {
     data: {
       type: "Task",
       task,
+      columnId,
     },
   });
 
@@ -44,6 +46,7 @@ export function TaskCard({ task }: TaskCardProps) {
       style={style}
       {...attributes}
       {...listeners}
+      data-id={task.id}
       className="glass glass-hover p-4 rounded-lg cursor-grab active:cursor-grabbing group min-h-[100px] flex flex-col justify-between"
     >
       <div className="flex items-start justify-between gap-3">

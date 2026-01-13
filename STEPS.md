@@ -31,3 +31,7 @@ This document outlines the steps taken to build the Kanban Board application.
 - Added vertical scrolling to columns with hidden scrollbars for a cleaner UI.
 - Added `createdAt` timestamp to tasks and displayed creation dates on cards.
 - Pushed code to GitHub.
+
+## 6. Persistence Fixes
+
+- **Bug Fix**: Resolved issue where task status updates were not persisting after reload. Refactored `Board.tsx` to handle state updates and API calls atomically in `handleDragEnd`.
