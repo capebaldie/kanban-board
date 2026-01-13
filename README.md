@@ -7,14 +7,16 @@ A modern, responsive Kanban board application built with React, TypeScript, and 
 ## Features
 
 - **Drag & Drop**: smooth drag-and-drop functionality powered by `@dnd-kit`.
-- **Persistent State**: Tasks are automatically saved to `localStorage`.
+- **Persistent State**: Tasks are stored in a **SQLite database** via a **Hono** server.
 - **Modern UI**: Dark-themed, glassmorphism design with Tailwind CSS v4.
 - **Task Management**: Create tasks, move them between columns (Tasks, In Progress, Done).
 - **Responsive**: Scrollable columns with hidden scrollbars.
 
 ## Tech Stack
 
-- **Framework**: Vite + React + TypeScript
+- **Frontend**: Vite + React + TypeScript
+- **Backend**: Hono + Node.js Adapter
+- **Database**: SQLite + Drizzle ORM + Better SQLite3
 - **Styling**: Tailwind CSS v4
 - **Icons**: Lucide React
 - **DnD**: @dnd-kit/core, @dnd-kit/sortable
@@ -33,7 +35,7 @@ A modern, responsive Kanban board application built with React, TypeScript, and 
    npm install
    ```
 
-3. Run the development server:
+3. Run the development server (starts both Frontend and Backend):
    ```bash
    npm run dev
    ```
